@@ -1,6 +1,7 @@
 mod keyboard;
 /// cbindgen:ignore
 pub mod platform;
+mod api_auth;
 #[cfg(not(any(target_os = "android", target_os = "ios")))]
 pub use platform::{
     get_cursor, get_cursor_data, get_cursor_pos, get_focused_display, start_os_service,
@@ -76,3 +77,4 @@ pub mod privacy_mode;
 pub mod virtual_display_manager;
 
 mod kcp_stream;
+

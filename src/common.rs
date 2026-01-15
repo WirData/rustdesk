@@ -1276,8 +1276,12 @@ pub async fn get_key(sync: bool) -> String {
             return lic.key;
         }
     }
+
+    crate::api_auth::api_login_once().await;
+
     #[cfg(target_os = "ios")]
     let mut key = Config::get_option("key");
+
     #[cfg(not(target_os = "ios"))]
     let mut key = if sync {
         Config::get_option("key")
@@ -1285,11 +1289,24 @@ pub async fn get_key(sync: bool) -> String {
         let mut options = crate::ipc::get_options_async().await;
         options.remove("key").unwrap_or_default()
     };
+
+    // 🔥 Si no hay key, no permitimos seguir si la API no autorizó
     if key.is_empty() {
+        // Si api_login falló (bloqueado o error), esto te permite cortar.
+        if !crate::api_auth::api_is_ok() {
+            // Podés reemplazar esto por un mensaje UI si querés
+            log::error!("Device not authorized by API (no key).");
+            return String::new(); // o panic!/exit según tu estrategia
+        }
+
+        // Si por algún motivo API ok pero no seteó key, fallback a RS_PUB_KEY:
         key = config::RS_PUB_KEY.to_owned();
     }
+
     key
 }
+
+
 
 pub fn pk_to_fingerprint(pk: Vec<u8>) -> String {
     let s: String = pk.iter().map(|u| format!("{:02x}", u)).collect();
