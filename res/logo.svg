@@ -23,14 +23,14 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="15.865385"
-     inkscape:cx="5.8618182"
+     inkscape:cx="5.9248483"
      inkscape:cy="13.961212"
      inkscape:window-width="2560"
      inkscape:window-height="1027"
      inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg2"><inkscape:page
+     inkscape:current-layer="layer-MC0"><inkscape:page
        x="0"
        y="0"
        width="26"
@@ -125,7 +125,13 @@
      id="layer-MC0"
      inkscape:groupmode="layer"
      inkscape:label="Layer 1"
-     transform="translate(36)"><path
+     transform="translate(36)"><ellipse
+       style="isolation:isolate;fill:#ffffff;stroke-width:0.278303"
+       id="path2"
+       cx="44.040272"
+       cy="910.90948"
+       rx="12.984242"
+       ry="9.8327265" /><path
        id="path4"
        d="m 52.287907,908.92208 c 0,4.26124 -2.851379,7.71575 -6.368075,7.71575 v 0 c -1.322093,0 -2.548434,-0.49004 -3.566216,-1.32513 v 0 c -0.426208,-0.17778 -0.822971,-0.41601 -1.175441,-0.71124 v 0 c 1.389786,2.62574 4.147338,4.41587 7.325319,4.41532 v 0 c 2.289795,0 4.358927,-0.92643 5.859866,-2.42738 v 0 c 1.500393,-1.5012 2.428476,-3.57061 2.428476,-5.86097 v 0 c 0,-2.28924 -0.928083,-4.35836 -2.428476,-5.85986 v 0 c -1.294579,-1.29431 -3.012614,-2.16019 -4.930135,-2.37428 v 0 c 1.718586,1.38181 2.854682,3.74205 2.854682,6.42779"
        style="fill:url(#linearGradient4);stroke:none;stroke-width:0.275148" /><path
@@ -140,4 +146,4 @@
        style="fill:url(#linearGradient7);stroke:none;stroke-width:0.275148" /><path
        id="path10"
        d="m 40.142512,910.80741 c 0,2.27163 1.743351,4.11459 3.896125,4.11459 v 0 c 2.153593,0 3.897773,-1.84296 3.897773,-4.11459 v 0 c 0,-2.27136 -1.74418,-4.11322 -3.897773,-4.11322 v 0 c -2.152774,0 -3.896125,1.84186 -3.896125,4.11322"
-       style="fill:url(#radialGradient10);stroke:none;stroke-width:0.275148" /></g></svg>
+       style="display:inline;fill:url(#radialGradient10);stroke:none;stroke-width:0.275148" /></g></svg>
